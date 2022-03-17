@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Гостиницы Седоны</title>
+
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 <header class="page-header">
@@ -109,7 +111,7 @@
         </fieldset>
 
         <fieldset class="catalog-filter-group">
-          <button class="button" type="submit">Показать</button>
+          <button class="button button-blue" type="submit">Показать</button>
           <button class="button button-clear" type="reset">Сбросить</button>
         </fieldset>
       </form>
@@ -126,7 +128,7 @@
         <option value="expensive">Сначала дорогое</option>
       </select>
       <div class="catalog-sort-type">
-        <a href="#" class="button button-sort-current">
+        <a href="#" class="button button-sort button-sort-current">
           <span class="visually-hidden">Показать карточки</span>
         </a>
         <a class="button button-sort" href="#">
@@ -249,7 +251,7 @@
   </section>
 
   <section class="newsletter newsletter-catalog">
-    <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+    <h2 class="newsletter-title newsletter-catalog-title">Подпишитесь на рассылку</h2>
     <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
     <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
       <label class="newsletter-email" for="appointment-date">Ваш e-mail</label>
@@ -282,6 +284,7 @@
     </ul>
   </section>
   <section class="footer-contacts">
+
     <h2 class="visually-hidden">Контакты</h2>
     <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
   </section>
