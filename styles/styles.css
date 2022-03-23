@@ -826,7 +826,7 @@ input.newsletter-email-field::placeholder {
   margin: 0;
   margin-bottom: 5px;
   font-size: 60px;
-  line-height: 78px;
+  line-height: 68px;
   font-weight: 700;
 }
 
@@ -886,6 +886,7 @@ input.newsletter-email-field::placeholder {
 
 .breadcrumbs-icon {
   fill: #ffffff;
+  display: block;
 }
 
 .catalog-filter-form {
@@ -900,6 +901,7 @@ input.newsletter-email-field::placeholder {
   display: flex;
   flex-direction: column;
   border: 0;
+  box-sizing: border-box;
 }
 
 .catalog-filter-group-button {
@@ -909,14 +911,6 @@ input.newsletter-email-field::placeholder {
 
 .control {
   padding-left: 40px;
-}
-
-.control-input {
-  margin-bottom: 13px;
-}
-
-.control-input:last-child {
-  margin-bottom: 0;
 }
 
 .control-price {
@@ -944,6 +938,10 @@ input.newsletter-email-field::placeholder {
 
 .catalog-filter-group-price {
   width: 287px;
+}
+
+.catalog-filter-group-price .catalog-filer-title{
+  margin-bottom: 34px;
 }
 
 .catalog-filter-list-price {
@@ -1006,7 +1004,12 @@ input[type=number].control-input-price {
 
 .catalog-filter-item {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 23px;
+  margin-bottom: 13px;
+}
+
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
 }
 
 .catalog-hotel {
