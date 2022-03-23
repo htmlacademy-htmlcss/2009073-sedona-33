@@ -473,6 +473,24 @@ input.newsletter-email-field::placeholder {
 
 .button-blue {
   background-color: #83B3D3;
+  width: 160px;
+  margin-bottom: 20px;
+  max-height: 48px;
+}
+
+.button-blue:hover {
+  background-color: #68A2CA;
+}
+
+.button-blue:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #FFFFFF;
+}
+
+.button-blue:active {
+  background-color: #68A2CA;
+  outline: 0;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .navigation-item .button-navigation {
@@ -508,6 +526,22 @@ input.newsletter-email-field::placeholder {
   line-height: 24px;
   font-weight: 400;
   text-transform: none;
+  padding: 0;
+  display: inline-block;
+  width: 100px;
+}
+
+.button-clear:hover {
+  opacity: 0.3;
+}
+
+.button-clear:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.button-clear:active {
+  opacity: 0.3;
+  outline: 0;
 }
 
 .no-favorite {
@@ -516,14 +550,62 @@ input.newsletter-email-field::placeholder {
   justify-self: end;
 }
 
+
+.no-favorite:hover {
+  background-color: #68A2CA;
+  outline: 1px solid #756257;
+}
+
+.no-favorite:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.no-favorite:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+  outline: 1px solid #756257;
+}
+
 .favorite {
   background-color: #7DB54F;
   width: 140px;
   justify-self: end;
 }
 
+
+.favorite:hover {
+  background-color: #6C9E42;
+}
+
+.favorite:focus {
+  background-color: #6C9E42;
+  outline: 3px solid #756257;
+}
+
+.favorite:active {
+  background-color: #6C9E42;
+  color: rgba(255, 255, 255, 0.3);
+  outline: 0;
+}
+
 .catalog-card-button {
   width: 133px;
+}
+
+.catalog-card-button:hover {
+  background-color: #615048;
+}
+
+.catalog-card-button:focus {
+  background-color: #615048;
+  outline: 3px solid #83B3D3;;
+}
+
+.catalog-card-button:active {
+  background-color: #615048;
+  color: rgba(255, 255, 255, 0.3);
+  outline: 0;
 }
 
 .button-index-search {
@@ -586,8 +668,37 @@ input.newsletter-email-field::placeholder {
   width: 48px;
   background-color: #ffffff;
   color: #000000;
-  border: 2px solid #000000;
+  border: 2px solid #E5E5E5;
   margin-right: 8px;
+  position: relative;
+  display: block;
+}
+
+.button-sort-current {
+  border: 2px solid #000000;
+}
+
+.sort-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.button-sort:hover {
+  border: 2px solid #83B3D3;
+}
+
+.button-sort:focus {
+  border: 2px solid #83B3D3;
+  outline: 0;
+}
+
+.button-sort:active {
+  border: 2px solid #000000;
 }
 
 .catalog-sort-type a:nth-child(3) {
@@ -732,13 +843,50 @@ input.newsletter-email-field::placeholder {
 .breadcrumbs-item {
   min-height: 12px;
   min-width: 12px;
-  padding-right: 10px;
+  padding-right: 20px;
+  position: relative;
 }
 
 .breadcrumbs-link {
   text-decoration: none;
+  position: relative;
+  list-style-type: none;
+  display: block;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  width: 10px;
+  height: 10px;
+  background-image: url("../images/icons/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 8px 5px;
+  transform: rotate(-90deg);
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}
+
+.breadcrumbs-icon {
+  fill: #ffffff;
+}
 
 .catalog-filter-form {
   display: flex;
@@ -751,6 +899,33 @@ input.newsletter-email-field::placeholder {
   margin: 0;
   display: flex;
   flex-direction: column;
+  border: 0;
+}
+
+.catalog-filter-group-button {
+  align-items: center;
+  margin-top: auto;
+}
+
+.control {
+  padding-left: 40px;
+}
+
+.control-input {
+  margin-bottom: 13px;
+}
+
+.control-input:last-child {
+  margin-bottom: 0;
+}
+
+.control-price {
+  position: absolute;
+  padding: 0;
+  right: 10px;
+  top: 13px;
+  color: #FFFFFF;
+  opacity: 0.3;
 }
 
 .catalog-filter-title {
@@ -758,12 +933,75 @@ input.newsletter-email-field::placeholder {
   line-height: 26px;
   font-weight: 700;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .catalog-filter-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.catalog-filter-group-price {
+  width: 287px;
+}
+
+.catalog-filter-list-price {
+  display: flex;
+}
+
+.control-input-price {
+  padding-left: 19px;
+  padding-top: 14px;
+  padding-bottom: 11px;
+  width: 143px;
+  max-height: 48px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/*Скрыть стрелки*/
+.control-input-price::-webkit-outer-spin-button,
+.control-input-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/*Скрыть стрелки firefox*/
+input[type=number].control-input-price {
+  -moz-appearance: textfield;
+}
+
+.control-input-price:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.control-input-price:focus {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 3px #81B3D2;
+  outline: 0;
+}
+
+.control-input-price:active {
+  border: 2px solid #FFFFFF;
+  background-color: #756257;
+}
+
+.catalog-filter-item-price:first-child .control-input-price {
+  border-radius: 4px 0 0 4px;
+}
+
+.catalog-filter-item-price:last-child .control-input-price {
+  border-radius: 0 4px 4px 0;
+  width: 144px;
+  border-left: 0;
+}
+
+.catalog-filter-item-price {
+  position: relative;
 }
 
 .catalog-filter-item {
@@ -795,6 +1033,10 @@ input.newsletter-email-field::placeholder {
 .select-control-catalog {
   width: 287px;
   margin-left: 191px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  padding-left: 19px;
+  border-radius: 4px;
 }
 
 .catalog-sort-type {
@@ -808,6 +1050,45 @@ input.newsletter-email-field::placeholder {
   font-size: 18px;
   line-height: 24px;
   font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid #E6E6E6;
+}
+
+.select-control-container {
+  position: relative;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 21px;
+  top: 50%;
+  bottom: 50%;
+  display: block;
+  padding: 0;
+  margin: auto;
+  fill: #000000;
+  opacity: 0.3;
+}
+
+.select-control:hover {
+  border: 2px solid #83B3D3;
+}
+
+.select-control:focus {
+  border: 2px solid #83B3D3;
+  outline: 0;
+}
+
+.select-control:active {
+  border: 2px solid #E6E6E6;
+  opacity: 0.3;
+}
+
+.select-control:active + .select-arrow {
+  opacity: 0.1;
 }
 
 .catalog-list {
@@ -840,6 +1121,23 @@ input.newsletter-email-field::placeholder {
   object-fit: contain;
 }
 
+.catalog-card-image:hover {
+  opacity: 0.6;
+}
+
+.catalog-card-image:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.catalog-card-image:active {
+  opacity: 0.6;
+  outline: 0;
+}
+
+.catalog-card-link:focus {
+  outline: 0;
+}
+
 .catalog-card-title {
   font-size: 24px;
   line-height: 32px;
@@ -857,6 +1155,7 @@ input.newsletter-email-field::placeholder {
   grid-template-rows: auto 37px 37px;
   grid-template-columns: 150px 150px;
   row-gap: 16px;
+  align-items: center;
 }
 
 .catalog-card-description p {
@@ -866,6 +1165,12 @@ input.newsletter-email-field::placeholder {
 .catalog-card-price {
   padding-left: 8px;
 }
+
+.catalog-card-description .button {
+  padding-top: 9px;
+  padding-bottom: 10px;
+}
+
 
 .button-rating {
   text-decoration: none;
@@ -878,6 +1183,12 @@ input.newsletter-email-field::placeholder {
 .button-stars {
   text-decoration: none;
   color: inherit;
+  display: flex;
+}
+
+.catalog-star-icon {
+  fill: #83B3D3;
+  margin-right: 7px;
 }
 
 .pagination-wrapper {
@@ -908,6 +1219,11 @@ input.newsletter-email-field::placeholder {
 .pagination-show-more {
   background-color: #83B3D3;
   width: 620px;
+  padding: 17px 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
 }
 
 .pagination-link {
@@ -923,6 +1239,21 @@ input.newsletter-email-field::placeholder {
   font-size: 20px;
   text-align: center;
   padding: 15px;
+  border-radius: 4px;
+}
+
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.pagination-link:active {
+  background-color: #68A2CA;
+  outline: 0;
 }
 
 .pagination-current {
@@ -943,6 +1274,10 @@ input.newsletter-email-field::placeholder {
 
 .select-control-pagination {
   width: 160px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 17px;
+  border-radius: 4px;
 }
 
 .newsletter-catalog {
