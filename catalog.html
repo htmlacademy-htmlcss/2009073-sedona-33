@@ -78,16 +78,26 @@
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн</label>
+                <label class="control" tabindex="0">
+                  <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked
+                         tabindex="-1">
+                  <span class="control-mark"></span>
+                  Бассейн
+                </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="car-park" checked>Парковка</label>
+                <label class="control" tabindex="0">
+                  <input class="visually-hidden control-input" type="checkbox" name="car-park" checked tabindex="-1">
+                  <span class="control-mark"></span>
+                  Парковка
+                </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="checkbox" name="wi-fi">Wi-Fi</label>
+                <label class="control" tabindex="0">
+                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi" tabindex="-1">
+                  <span class="control-mark"></span>
+                  Wi-Fi
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -96,16 +106,22 @@
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="hotel-type" value="hotel" checked>Гостиницы</label>
+                <label class="control" tabindex="0">
+                  <input class="visually-hidden control-input" type="radio" name="hotel-type" value="hotel" checked
+                         tabindex="-1">
+                  <span class="control-mark"></span>Гостиницы</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="hotel-type" value="motel">Мотель</label>
+                <label class="control" tabindex="0">
+                  <input class="visually-hidden control-input" type="radio" name="hotel-type" value="motel"
+                         tabindex="-1">
+                  <span class="control-mark"></span>Мотель</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control">
-                  <input class="control-input" type="radio" name="hotel-type" value="apartments">Апартаменты</label>
+                <label class="control" tabindex="0">
+                  <input class="visually-hidden control-input" type="radio" name="hotel-type" value="apartments"
+                         tabindex="-1">
+                  <span class="control-mark"></span>Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -115,17 +131,27 @@
             <ul class="catalog-filter-list catalog-filter-list-price">
               <li class="catalog-filter-item catalog-filter-item-price">
                 <label class="control control-price" for="price-min">от</label>
-                <input class="control-input control-input-price" type="number" name="price-min" id="price-min" value="0">
+                <input class="control-input control-input-price" type="number" name="price-min" id="price-min"
+                       value="0">
               </li>
               <li class="catalog-filter-item catalog-filter-item-price">
                 <label class="control control-price" for="price-max">до</label>
-                <input class="control-input control-input-price" type="number" name="price-max" id="price-max" value="9000">
+                <input class="control-input control-input-price" type="number" name="price-max" id="price-max"
+                       value="9000">
               </li>
             </ul>
-            <label class="control">
-              <!-- Пока что нет понимания как сделать двойной выбор-->
-              <input type="range" min="0" max="9000" step="1" value="7000"/>
-            </label>
+            <div class="range">
+              <div class="range-scale">
+                <div class="range-bar" style="width: 227px">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="catalog-filter-group catalog-filter-group-button">
