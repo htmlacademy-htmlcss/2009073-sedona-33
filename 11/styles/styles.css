@@ -1754,7 +1754,7 @@ input[type=number].modal-search-form-input {
   margin-left: auto;
   margin-right: auto;
 }
-
+/*Для показа*/
 .modal-container-close{
-  display: none;
+  /*display: none;*/
 }
