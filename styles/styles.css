@@ -42,10 +42,6 @@ body {
   overflow: hidden;
 }
 
-h1 {
-  margin: 0;
-}
-
 .main-container {
   flex-grow: 1;
 }
@@ -1515,14 +1511,17 @@ input[type=number].control-input-price {
   border-radius: 4px;
   font-weight: 700;
 }
-.modal-search-form-input:hover{
+
+.modal-search-form-input:hover {
   background-color: #E6E6E6;
 }
-.modal-search-form-input:focus{
+
+.modal-search-form-input:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
-.modal-search-form-input:active{
+
+.modal-search-form-input:active {
   background-color: #FFFFFF;
   outline: 2px solid #000000;
 }
@@ -1614,7 +1613,7 @@ input[type=number].modal-search-form-input {
   outline: 3px solid #83B3D3;
 }
 
-.minus-mark:focus{
+.minus-mark:focus {
   opacity: 1;
   outline: 3px solid #83B3D3;
 }
@@ -1673,14 +1672,16 @@ input[type=number].modal-search-form-input {
   padding-bottom: 10px;
 }
 
-.modal-search-form-button:hover{
+.modal-search-form-button:hover {
   background-color: #68A2CA;
 }
-.modal-search-form-button:focus{
+
+.modal-search-form-button:focus {
   background-color: #68A2CA;
   outline: 3px solid #756257;
 }
-.modal-search-form-button:active{
+
+.modal-search-form-button:active {
   background-color: #68A2CA;
   outline: 0;
   opacity: 0.3;
@@ -1754,7 +1755,8 @@ input[type=number].modal-search-form-input {
   margin-left: auto;
   margin-right: auto;
 }
-/*Для показа*/
-.modal-container-close{
-  /*display: none;*/
+
+/*Для показа модалки закомментировать*/
+.modal-container-close {
+  display: none;
 }
